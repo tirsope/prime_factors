@@ -12,6 +12,8 @@ original number. (e.g) Prime factor of 8 is 2 x 2 x 2
 
 [source](http://www.mathsisfun.com/prime-factorization.html)
 
+* Keep in mind that "1" is not considered a prime number.
+
 Usage
 =====
 

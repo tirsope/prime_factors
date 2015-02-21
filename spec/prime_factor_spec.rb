@@ -41,4 +41,20 @@ describe PrimeFactor do
     expect(PrimeFactor.of(10)).to eq [2, 5]
   end
 
+  it "should calculate prime factors of 12" do
+    expect(PrimeFactor.of(12)).to eq [2, 2, 3]
+  end
+
+  it "should calculate prime factors of 25" do
+    expect(PrimeFactor.of(25)).to eq [5, 5]
+  end
+
+  it "should calculate prime factors of 45489" do
+    expect(PrimeFactor.of(45489)).to eq [3, 59, 257]
+  end
+
+  it "should calculate prime factors of 123123123" do
+    expect(PrimeFactor.of(123123123)).to eq [3, 3, 41, 333667]
+  end
+
 end

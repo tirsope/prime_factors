@@ -18,14 +18,14 @@ Usage
 =====
 
 ```ruby
-  PrimeFactor.of(2) => [1]
+  PrimeFactor.of(1) => [1]
   PrimeFactor.of(2) => [2]
   PrimeFactor.of(3) => [3]
   PrimeFactor.of(4) => [2,2]
   PrimeFactor.of(5) => [5]
   PrimeFactor.of(6) => [2,3]
   PrimeFactor.of(7) => [7]
-  PrimeFactor.of(8) => [2,2]
+  PrimeFactor.of(8) => [2,2, 2]
   PrimeFactor.of(9) => [3,3]
   PrimeFactor.of(10) => [2,5]
   PrimeFactor.of(12) => [2,2,3]

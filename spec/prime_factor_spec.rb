@@ -25,4 +25,20 @@ describe PrimeFactor do
     expect(PrimeFactor.of(6)).to eq [2, 3]
   end
 
+  it "should calculate prime factors of 7" do
+    expect(PrimeFactor.of(7)).to eq [7]
+  end
+
+  it "should calculate prime factors of 8" do
+    expect(PrimeFactor.of(8)).to eq [2, 2, 2]
+  end
+
+  it "should calculate prime factors of 9" do
+    expect(PrimeFactor.of(9)).to eq [3, 3]
+  end
+
+  it "should calculate prime factors of 10" do
+    expect(PrimeFactor.of(10)).to eq [2, 5]
+  end
+
 end

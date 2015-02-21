@@ -7,7 +7,7 @@ class PrimeFactor
     if number == 1 or Prime.prime? number
       factors << number
     else
-      (2..Math.sqrt(number).ceil).each do |x|
+      (2..(number/2).ceil).each do |x|
         if Prime.prime? x
           while (number % x) == 0
             factors << x

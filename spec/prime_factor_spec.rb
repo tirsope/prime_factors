@@ -1,14 +1,28 @@
 require './lib/prime_factor'
 
 describe PrimeFactor do
-  it "should instatite the PrimeFactor Class" do
-    prime = PrimeFactor.new
-    expect(prime).to be_instance_of PrimeFactor
+  it "should calculate the prime factors of 2" do
+    expect(PrimeFactor.of(1)).to eq [1]
   end
 
-  it "should calculate the prime factor of 2" do
-    prime = PrimeFactor.new
-    expect(prime.of(2)).to eq 2
+  it "should calculate the prime factors of 2" do
+    expect(PrimeFactor.of(2)).to eq [2]
+  end
+
+  it "should calculate the prime factors of 3" do
+    expect(PrimeFactor.of(3)).to eq [3]
+  end
+
+  it "should calculate prime factors of 4" do
+    expect(PrimeFactor.of(4)).to eq [2,2]
+  end
+
+  it "should calculate prime factors of 5" do
+    expect(PrimeFactor.of(5)).to eq [5]
+  end
+
+  it "should calculate prime factors of 6" do
+    expect(PrimeFactor.of(6)).to eq [2, 3]
   end
 
 end

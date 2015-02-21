@@ -7,25 +7,25 @@ class PrimeFactor
     if number == 1 or Prime.prime? number
       factors << number
     else
-      (2..(number/2).ceil).each do |x|
-        if Prime.prime? x
-          while (number % x) == 0
-            factors << x
-            number = number / x
-          end
+      primes = primes_up_to((number/2).ceil)
+      primes.each do |x|
+        while (number % x) == 0
+          factors << x
+          number /= x
         end
       end
     end
     factors
   end
 
-  # def self.sieve(max=100)
-  #   sieve = []
-  #   (2..max).each { |i| sieve[i] = i }
-  #   (2..Math.sqrt(max)).each do |i|
-  #     (i*i).step(max, i) { |j| sieve[j] = nil } if sieve[i]
-  #   end
-  #   sieve.compact
-  # end
+  # http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+  def self.primes_up_to(max)
+    primes = []
+    (2..max).each { |i| primes[i] = i }
+    (2..Math.sqrt(max)).each do |i|
+      (i*i).step(max, i) { |j| primes[j] = nil } if primes[i]
+    end
+    primes.compact
+  end
 
 end

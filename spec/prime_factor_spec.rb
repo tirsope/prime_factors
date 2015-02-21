@@ -57,4 +57,8 @@ describe PrimeFactor do
     expect(PrimeFactor.of(123123123)).to eq [3, 3, 41, 333667]
   end
 
+  it "should return primes numbers up to 10" do
+    expect(PrimeFactor.primes_up_to(10)).to eq [2, 3, 5, 7]
+  end
+
 end

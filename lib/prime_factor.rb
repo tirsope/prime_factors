@@ -1,6 +1,6 @@
 require 'mathn'
 class PrimeFactor
-
+#comment 1
   def self.of number
     factors = []
 
